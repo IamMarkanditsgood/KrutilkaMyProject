@@ -13,8 +13,8 @@ public class MoveOfCylinder : MonoBehaviour, IMove
     public void Move()
     {
         if (Input.touchCount > 0 || Input.GetMouseButton(0))
-        {
-            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * 5, Space.Self);
+        {         
+            transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * -DataForLevels.GetDatas.SpeedForRotation, Space.Self);
         }
     }
 }

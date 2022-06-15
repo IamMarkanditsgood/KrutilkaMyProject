@@ -20,7 +20,7 @@ public class StartLosseButton : MonoBehaviour
     {
         if(DataForLevels.GetDatas.StateOfLevel == false)
         {
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
         else
         {
@@ -34,7 +34,10 @@ public class StartLosseButton : MonoBehaviour
     }
     public void LoadLosseMenu()
     {
-        UIObjects[0].SetActive(false);
+        for (int i = 0; i < UIObjects.Count; i++)
+        {
+            UIObjects[i].SetActive(false);
+        }
         _text.text = "Tap the screen to restart level";
         _button.gameObject.SetActive(true);
     }

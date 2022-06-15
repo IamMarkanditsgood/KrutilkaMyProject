@@ -9,8 +9,9 @@ public class DataForLevels : MonoBehaviour
     [SerializeField] private List<Transform> _startPositionForCubes;
     [SerializeField] private float _speedForObjects;
     [SerializeField] private float _timeForSpavn;
+    [SerializeField] private float _timeForChangingPosition;
+    [SerializeField] private float _speedForRotation;
     [SerializeField] private int _scoreInCurrentLevel;
-    [SerializeField] private int _currentLevel;
     [SerializeField] private int _levelComplexity;
     [SerializeField] private int _numberOfCapabilityShield;
     private bool _stateOfLevel = true;
@@ -41,10 +42,20 @@ public class DataForLevels : MonoBehaviour
         get { return _stateOfLevel; }
         set { _stateOfLevel = value; }
     }
+    public float SpeedForRotation
+    {
+        get { return _speedForRotation; }
+        set { _speedForRotation = value; }
+    }
     public float SpeedForObjects
     {
         get { return _speedForObjects; }
         set { _speedForObjects = value; }
+    }
+    public float TimeForChangingPosition
+    {
+        get { return _timeForChangingPosition; }
+        set { _timeForChangingPosition = value; }
     }
     public float TimeForSpavn
     {
@@ -60,11 +71,6 @@ public class DataForLevels : MonoBehaviour
     {
         get { return _scoreInCurrentLevel; }
         set { _scoreInCurrentLevel = value; }
-    }
-    public int CurrentLevel
-    {
-        get { return _currentLevel; }
-        set { _currentLevel = value; }
     }
     public int LevelComplexity
     {

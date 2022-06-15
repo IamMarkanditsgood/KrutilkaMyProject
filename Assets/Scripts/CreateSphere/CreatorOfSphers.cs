@@ -95,16 +95,17 @@ public class CreatorOfSphers : MonoBehaviour, ICreator
                     ChanceForTeleportSpher = -1;
                     break;
                 case 1:
-                    ChanceForTeleportSpher = 10;
+               
+                    ChanceForTeleportSpher = 10;//10
                     break;
                 case 2:
-                    ChanceForTeleportSpher = 25;
+                    ChanceForTeleportSpher = 25;//25
                     break;
             case 3:
-                ChanceForTeleportSpher = 50;
+                ChanceForTeleportSpher = 50;//50
                 break;
             default:
-                    ChanceForTeleportSpher = 50;
+                    ChanceForTeleportSpher = 50;//50
                     break;
 
             }

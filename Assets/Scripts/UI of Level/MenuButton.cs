@@ -7,6 +7,6 @@ public class MenuButton : MonoBehaviour
 {
     public void PressToMenu()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }

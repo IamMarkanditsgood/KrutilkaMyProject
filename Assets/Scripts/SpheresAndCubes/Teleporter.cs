@@ -5,7 +5,6 @@ using UnityEngine;
 public class Teleporter : MonoBehaviour
 {
     private List<Transform> _startPositions;
-    private float _timeForChangePosition = 2;
     private float _timer;
     private void Start()
     {
@@ -22,7 +21,7 @@ public class Teleporter : MonoBehaviour
     private void FixedUpdate()
     {
         _timer += Time.deltaTime;
-        if (_timer >= _timeForChangePosition)
+        if (_timer >= DataForLevels.GetDatas.TimeForChangingPosition)
         {
 
             int RandomPositionForChanging = Random.Range(0, _startPositions.Count);
