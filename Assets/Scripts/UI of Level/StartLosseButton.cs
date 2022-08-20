@@ -1,16 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class StartLosseButton : MonoBehaviour
 {
-   
     [SerializeField] private GameObject _button;
     [SerializeField] private List <GameObject> UIObjects;
-    [SerializeField] private Text _text;
+    [SerializeField] private TMP_Text _text;
+    [SerializeField] private ClickButtonSound _sound;
     public static StartLosseButton startLosseButton;
+
     private void Awake()
     {
         startLosseButton = this;
@@ -18,8 +18,10 @@ public class StartLosseButton : MonoBehaviour
     }
     public void PressingButton()
     {
-        if(DataForLevels.GetDatas.StateOfLevel == false)
+        _sound.ClickSound();
+        if (DataForLevels.GetDatas.StateOfLevel == false)
         {
+
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
         else

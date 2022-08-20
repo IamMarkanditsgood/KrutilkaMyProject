@@ -141,6 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creatorOfSpheres: {fileID: 0}
   _creatorOfCubes: {fileID: 624985912046567385}
+  _creatorOfCapabilityObject: {fileID: 0}
+  _hitEffect: {fileID: 2062631375461457866, guid: 682ad7e4bc1c34146944418c64805ae8, type: 3}
 --- !u!114 &624985912046567385
 MonoBehaviour:
   m_ObjectHideFlags: 0

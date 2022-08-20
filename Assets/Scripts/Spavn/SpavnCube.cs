@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +6,8 @@ public class SpavnCube : MonoBehaviour, ISpavnAndGetObjects
     public static SpavnCube ObjectInstance;
     [SerializeField] private List<GameObject> _pooledCube = new List<GameObject>();
     [SerializeField] private GameObject _cubePrefab;
-    [SerializeField] private int _cubeNumber = 5;
-    [SerializeField] private bool _shouldExpand = true;
+    [SerializeField] private int _cubeNumber;
+    [SerializeField] private bool _shouldExpand;
 
     private void Awake()
     {
@@ -19,7 +18,6 @@ public class SpavnCube : MonoBehaviour, ISpavnAndGetObjects
         for (int i = 0; i < _cubeNumber; i++)
         {
             CreateNewObject();
-
         }
     }
     public void CreateNewObject()

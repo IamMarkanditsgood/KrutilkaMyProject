@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreText : MonoBehaviour
 {
-    [SerializeField] private Text _scoreTect;
+    [SerializeField] private TMP_Text _scoreTect;
+
     void Update()
     {
         _scoreTect.text = DataForLevels.GetDatas.ScoreInCurrentLevel.ToString();

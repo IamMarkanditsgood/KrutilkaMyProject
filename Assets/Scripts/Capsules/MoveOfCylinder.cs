@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class MoveOfCylinder : MonoBehaviour, IMove
 {
-
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
     }

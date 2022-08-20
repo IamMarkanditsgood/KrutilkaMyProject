@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CreateCubes : MonoBehaviour, ICreator
@@ -7,11 +5,11 @@ public class CreateCubes : MonoBehaviour, ICreator
     [SerializeField] private Color[] _colorForCube = new Color[_numberOfColorForCubes];
     private bool _recreateOfCube;
     private const int _numberOfColorForCubes = 4;
+
     public void SetRecreator(bool Recreate)
     {
         this._recreateOfCube = Recreate;
     }
-
     private void Start()
     {
         CreateNewFeatures();
@@ -26,7 +24,6 @@ public class CreateCubes : MonoBehaviour, ICreator
     }
     private void CreateNewFeatures()
     {
-
         CreateColorForCube();
         CreateTagForCube();
         CreateScriptOfCube();
@@ -37,7 +34,6 @@ public class CreateCubes : MonoBehaviour, ICreator
     }
     private void CreateTagForCube()
     {
-        
         if (gameObject.GetComponent<Renderer>().material.color == new Color(1, 0, 0, 1))
         {
             gameObject.tag = "Red";
@@ -57,15 +53,12 @@ public class CreateCubes : MonoBehaviour, ICreator
     }
     private void CreateScriptOfCube()
     {
-
         switch (NumberOfCubesType())// Свитч для будущих дополнений
         {
             case 0:
-
                 gameObject.AddComponent<Teleporter>();
                 break;
             default:
-
                 break;
         }
     }
@@ -73,7 +66,6 @@ public class CreateCubes : MonoBehaviour, ICreator
     {
         int levelComplexity = DataForLevels.GetDatas.LevelComplexity;
         int RandomTypeOfCubeOnScene = Random.Range(0, 101);
-
         int ChanceForTeleportCub;
         switch (levelComplexity)
         {
@@ -92,7 +84,6 @@ public class CreateCubes : MonoBehaviour, ICreator
             default:
                 ChanceForTeleportCub = 50;
                 break;
-
         }
         if (RandomTypeOfCubeOnScene <= ChanceForTeleportCub)
         {
@@ -102,6 +93,5 @@ public class CreateCubes : MonoBehaviour, ICreator
         {
             return 1;
         }
-
     }
 }

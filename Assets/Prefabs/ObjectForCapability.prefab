@@ -164,6 +164,7 @@ MonoBehaviour:
   _creatorOfSpheres: {fileID: 0}
   _creatorOfCubes: {fileID: 0}
   _creatorOfCapabilityObject: {fileID: 7760991156135083854}
+  _hitEffect: {fileID: 2062631375461457866, guid: 682ad7e4bc1c34146944418c64805ae8, type: 3}
 --- !u!1 &9146198810345801178
 GameObject:
   m_ObjectHideFlags: 0

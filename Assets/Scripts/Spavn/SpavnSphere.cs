@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +6,8 @@ public class SpavnSphere : MonoBehaviour, ISpavnAndGetObjects
     public static SpavnSphere ObjectInstance;
     [SerializeField] private List<GameObject> _pooledSphere = new List<GameObject>();
     [SerializeField] private GameObject _spherePrefab;
-    [SerializeField] private int _spheresNumber = 5;
-    [SerializeField] private bool _shouldExpand = true;
+    [SerializeField] private int _spheresNumber;
+    [SerializeField] private bool _shouldExpand;
 
     private void Awake()
     {
@@ -19,7 +18,6 @@ public class SpavnSphere : MonoBehaviour, ISpavnAndGetObjects
         for (int i = 0; i < _spheresNumber; i++)
         {
             CreateNewObject();
-            
         }
     }
     public void CreateNewObject()
@@ -30,7 +28,6 @@ public class SpavnSphere : MonoBehaviour, ISpavnAndGetObjects
     }
     public GameObject GetObject()
     {
-
         for (int i = 0; i < _pooledSphere.Count; i++)
         {
             if (!_pooledSphere[i].activeInHierarchy)

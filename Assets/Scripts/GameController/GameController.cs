@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -7,6 +5,7 @@ public class GameController : MonoBehaviour
     private float _timer = 0;
     private int _randomNumberOfPosition;
     private Transform _startPositionForSpavn;
+
     private void Awake()
     {
         Time.timeScale = 0;
@@ -19,10 +18,8 @@ public class GameController : MonoBehaviour
             GameObject bullet = GetObject();
             if (bullet != null)
             {
-                
                 bullet.transform.position = _startPositionForSpavn.position;
                 bullet.SetActive(true);
-
             }
             _timer = 0;
         }
@@ -34,19 +31,13 @@ public class GameController : MonoBehaviour
             case 0:
                 ChoisePositionForSphere();
                 return SpavnSphere.ObjectInstance.GetObject();
-                
             case 1:
                 return RandomObject(1);
-                
             case 2:
                 return RandomObject(2);
-                
             default:
                 return RandomObject(3);
-                
-
         }
-
     }
     private GameObject RandomObject(int numberOfObjects)
     {
@@ -65,7 +56,6 @@ public class GameController : MonoBehaviour
                     ChoisePositionForCubes();
                     return objects[1];
                 }
-                
                 break;
             case 2:
                 if (randProcent <= 73)
@@ -83,8 +73,6 @@ public class GameController : MonoBehaviour
                     ChoisePositionForSphere();
                     return objects[2];
                 }
-               
-                
             default:
                 if (randProcent <= 73)
                 {
@@ -101,8 +89,6 @@ public class GameController : MonoBehaviour
                     ChoisePositionForSphere();
                     return objects[2];
                 }
-                
-                
         }
         return null;
     }
@@ -115,7 +101,6 @@ public class GameController : MonoBehaviour
     {
         _randomNumberOfPosition = Random.Range(0, DataForLevels.GetDatas.StartPositionForCubes.Count);
         _startPositionForSpavn = DataForLevels.GetDatas.StartPositionForCubes[_randomNumberOfPosition];
-
     }
 }
 

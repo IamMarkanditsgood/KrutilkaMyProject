@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpavnCapabilityObject : MonoBehaviour, ISpavnAndGetObjects
@@ -12,7 +10,7 @@ public class SpavnCapabilityObject : MonoBehaviour, ISpavnAndGetObjects
     {
         ObjectInstance = this;
     }
-    void Start()
+    private void Start()
     {
         CreateNewObject();
     }

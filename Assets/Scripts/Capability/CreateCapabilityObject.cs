@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CreateCapabilityObject : MonoBehaviour, ICreator
 {
     [SerializeField] private Color [] _colorForCapabilityObject;
     private bool _recreateOfCapabilityObject;
+
     public void SetRecreator(bool Recreate)
     {
         this._recreateOfCapabilityObject = Recreate;
     }
-
     private void Start()
     {
         CreateNewFeatures();
@@ -34,7 +32,6 @@ public class CreateCapabilityObject : MonoBehaviour, ICreator
     }
     private void CreateTagForCapabilityObject()
     {
-
         if (gameObject.GetComponent<Renderer>().material.color == new Color(1, 0, 0,1))
         {
             gameObject.tag = "Red";
